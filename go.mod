@@ -17,6 +17,7 @@ require (
 	github.com/slidebolt/sb-script v1.0.1
 	github.com/slidebolt/sb-storage-sdk v1.0.1
 	github.com/slidebolt/sb-storage-server v1.0.1
+	github.com/slidebolt/sb-testkit v1.0.1
 )
 
 require (
@@ -96,3 +97,5 @@ replace github.com/slidebolt/plugin-wiz => ../plugin-wiz
 replace github.com/slidebolt/plugin-zigbee2mqtt => ../plugin-zigbee2mqtt
 
 replace github.com/slidebolt/sb-script => ../sb-script
+
+replace github.com/slidebolt/sb-testkit => ../sb-testkit

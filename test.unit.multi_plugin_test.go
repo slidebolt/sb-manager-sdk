@@ -7,7 +7,7 @@ import (
 	systemapp "github.com/slidebolt/plugin-system/app"
 	automationapp "github.com/slidebolt/plugin-automation/app"
 	domain "github.com/slidebolt/sb-domain"
-	managersdk "github.com/slidebolt/sb-manager-sdk"
+	testkit "github.com/slidebolt/sb-testkit"
 	messenger "github.com/slidebolt/sb-messenger-sdk"
 	storage "github.com/slidebolt/sb-storage-sdk"
 	server "github.com/slidebolt/sb-storage-server"
@@ -18,7 +18,7 @@ import (
 // This is the unit-level version of LocalStack: wires up plugins manually
 // without the LocalStack helper, confirming the primitive works correctly.
 func TestSharedTestEnvStartsMultipleImportedPlugins(t *testing.T) {
-	env := managersdk.NewTestEnv(t)
+	env := testkit.NewTestEnv(t)
 	env.Start("messenger")
 	env.Start("storage")
 

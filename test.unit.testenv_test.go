@@ -1,13 +1,14 @@
-package managersdk
+package managersdk_test
 
 import (
 	"testing"
 
 	messenger "github.com/slidebolt/sb-messenger-sdk"
+	testkit "github.com/slidebolt/sb-testkit"
 )
 
 func TestEnvMessenger(t *testing.T) {
-	env := NewTestEnv(t)
+	env := testkit.NewTestEnv(t)
 	env.Start("messenger")
 
 	msg := env.Messenger()
@@ -25,7 +26,7 @@ func TestEnvMessenger(t *testing.T) {
 }
 
 func TestEnvSchema(t *testing.T) {
-	env := NewTestEnv(t)
+	env := testkit.NewTestEnv(t)
 	env.Start("messenger")
 	env.Start("storage")
 

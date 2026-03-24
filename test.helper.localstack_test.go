@@ -19,7 +19,7 @@ import (
 	systemapp "github.com/slidebolt/plugin-system/app"
 	wizapp "github.com/slidebolt/plugin-wiz/app"
 	z2mapp "github.com/slidebolt/plugin-zigbee2mqtt/app"
-	managersdk "github.com/slidebolt/sb-manager-sdk"
+	testkit "github.com/slidebolt/sb-testkit"
 	messenger "github.com/slidebolt/sb-messenger-sdk"
 	automationapp "github.com/slidebolt/plugin-automation/app"
 	scriptserver "github.com/slidebolt/sb-script/server"
@@ -38,7 +38,7 @@ type pluginApp interface {
 // Start() so that plugins see pre-existing data during their OnStart phase.
 type LocalStack struct {
 	t                *testing.T
-	env              *managersdk.TestEnv
+	env              *testkit.TestEnv
 	configuredIDs    []string
 }
 
@@ -48,7 +48,7 @@ type LocalStack struct {
 func NewLocalStack(t *testing.T) *LocalStack {
 	t.Helper()
 
-	env := managersdk.NewTestEnv(t)
+	env := testkit.NewTestEnv(t)
 	env.Start("messenger")
 	env.Start("storage")
 
