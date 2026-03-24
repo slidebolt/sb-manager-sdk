@@ -11,7 +11,7 @@ import (
 	systemapp "github.com/slidebolt/plugin-system/app"
 	wizapp "github.com/slidebolt/plugin-wiz/app"
 	z2mapp "github.com/slidebolt/plugin-zigbee2mqtt/app"
-	automationapp "github.com/slidebolt/sb-plugin-automation/app"
+	automationapp "github.com/slidebolt/plugin-automation/app"
 )
 
 // TestLocalStackReportConfiguredPlugins proves that after Start() every

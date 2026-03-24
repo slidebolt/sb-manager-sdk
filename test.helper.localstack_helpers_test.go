@@ -5,7 +5,7 @@ import (
 	"testing"
 
 	systemapp "github.com/slidebolt/plugin-system/app"
-	automationapp "github.com/slidebolt/sb-plugin-automation/app"
+	automationapp "github.com/slidebolt/plugin-automation/app"
 	domain "github.com/slidebolt/sb-domain"
 	storage "github.com/slidebolt/sb-storage-sdk"
 )

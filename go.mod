@@ -3,20 +3,20 @@ module github.com/slidebolt/sb-manager-sdk
 go 1.26.1
 
 require (
-	github.com/slidebolt/plugin-amcrest v0.0.0-00010101000000-000000000000
-	github.com/slidebolt/plugin-androidtv v0.0.0-00010101000000-000000000000
-	github.com/slidebolt/plugin-esphome v0.0.0-00010101000000-000000000000
-	github.com/slidebolt/plugin-frigate v0.0.0-00010101000000-000000000000
-	github.com/slidebolt/plugin-kasa v0.0.0-00010101000000-000000000000
-	github.com/slidebolt/plugin-system v0.0.0-00010101000000-000000000000
-	github.com/slidebolt/plugin-wiz v0.0.0-00010101000000-000000000000
-	github.com/slidebolt/plugin-zigbee2mqtt v0.0.0-00010101000000-000000000000
-	github.com/slidebolt/sb-domain v1.0.0
-	github.com/slidebolt/sb-messenger-sdk v1.0.0
-	github.com/slidebolt/sb-plugin-automation v0.0.0-00010101000000-000000000000
-	github.com/slidebolt/sb-script v0.0.0-00010101000000-000000000000
-	github.com/slidebolt/sb-storage-sdk v1.0.0
-	github.com/slidebolt/sb-storage-server v1.0.0
+	github.com/slidebolt/plugin-amcrest v1.0.1
+	github.com/slidebolt/plugin-androidtv v1.0.1
+	github.com/slidebolt/plugin-automation v1.0.1
+	github.com/slidebolt/plugin-esphome v1.0.1
+	github.com/slidebolt/plugin-frigate v1.0.1
+	github.com/slidebolt/plugin-kasa v1.0.1
+	github.com/slidebolt/plugin-system v1.0.1
+	github.com/slidebolt/plugin-wiz v1.0.1
+	github.com/slidebolt/plugin-zigbee2mqtt v1.0.1
+	github.com/slidebolt/sb-domain v1.0.1
+	github.com/slidebolt/sb-messenger-sdk v1.0.1
+	github.com/slidebolt/sb-script v1.0.1
+	github.com/slidebolt/sb-storage-sdk v1.0.1
+	github.com/slidebolt/sb-storage-server v1.0.1
 )
 
 require (
@@ -63,7 +63,7 @@ require (
 	github.com/nats-io/nkeys v0.4.15 // indirect
 	github.com/nats-io/nuid v1.0.1 // indirect
 	github.com/sirupsen/logrus v1.9.3 // indirect
-	github.com/slidebolt/sb-contract v1.0.0 // indirect
+	github.com/slidebolt/sb-contract v1.0.1 // indirect
 	github.com/vishen/go-chromecast v0.3.4 // indirect
 	github.com/yuin/gopher-lua v1.1.1 // indirect
 	go.etcd.io/bbolt v1.4.0 // indirect
@@ -77,11 +77,11 @@ require (
 	google.golang.org/protobuf v1.36.11 // indirect
 )
 
-replace github.com/slidebolt/sb-script => ../sb-script
-
 replace github.com/slidebolt/plugin-amcrest => ../plugin-amcrest
 
 replace github.com/slidebolt/plugin-androidtv => ../plugin-androidtv
+
+replace github.com/slidebolt/plugin-automation => ../plugin-automation
 
 replace github.com/slidebolt/plugin-esphome => ../plugin-esphome
 
@@ -95,6 +95,4 @@ replace github.com/slidebolt/plugin-wiz => ../plugin-wiz
 
 replace github.com/slidebolt/plugin-zigbee2mqtt => ../plugin-zigbee2mqtt
 
-replace github.com/slidebolt/sb-plugin-automation => ../plugin-automation
-
-replace github.com/slidebolt/sb-domain => ../sb-domain
+replace github.com/slidebolt/sb-script => ../sb-script

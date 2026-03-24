@@ -6,7 +6,7 @@ import (
 
 	esphomeapp "github.com/slidebolt/plugin-esphome/app"
 	kasaapp "github.com/slidebolt/plugin-kasa/app"
-	automationapp "github.com/slidebolt/sb-plugin-automation/app"
+	automationapp "github.com/slidebolt/plugin-automation/app"
 	domain "github.com/slidebolt/sb-domain"
 )
 

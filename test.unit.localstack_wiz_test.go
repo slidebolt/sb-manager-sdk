@@ -6,7 +6,7 @@ import (
 
 	wizapp "github.com/slidebolt/plugin-wiz/app"
 	domain "github.com/slidebolt/sb-domain"
-	automationapp "github.com/slidebolt/sb-plugin-automation/app"
+	automationapp "github.com/slidebolt/plugin-automation/app"
 )
 
 // TestLocalStackPluginAutomationCreatesGroupFromAutodiscoveredWizEntity proves

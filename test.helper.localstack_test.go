@@ -21,7 +21,7 @@ import (
 	z2mapp "github.com/slidebolt/plugin-zigbee2mqtt/app"
 	managersdk "github.com/slidebolt/sb-manager-sdk"
 	messenger "github.com/slidebolt/sb-messenger-sdk"
-	automationapp "github.com/slidebolt/sb-plugin-automation/app"
+	automationapp "github.com/slidebolt/plugin-automation/app"
 	scriptserver "github.com/slidebolt/sb-script/server"
 	storage "github.com/slidebolt/sb-storage-sdk"
 )
