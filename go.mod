@@ -3,21 +3,21 @@ module github.com/slidebolt/sb-manager-sdk
 go 1.26.1
 
 require (
-	github.com/slidebolt/plugin-amcrest v1.0.1
-	github.com/slidebolt/plugin-androidtv v1.0.1
-	github.com/slidebolt/plugin-automation v1.0.1
-	github.com/slidebolt/plugin-esphome v1.0.1
-	github.com/slidebolt/plugin-frigate v1.0.1
-	github.com/slidebolt/plugin-kasa v1.0.1
-	github.com/slidebolt/plugin-system v1.0.1
-	github.com/slidebolt/plugin-wiz v1.0.1
-	github.com/slidebolt/plugin-zigbee2mqtt v1.0.1
-	github.com/slidebolt/sb-domain v1.0.1
-	github.com/slidebolt/sb-messenger-sdk v1.0.1
-	github.com/slidebolt/sb-script v1.0.1
-	github.com/slidebolt/sb-storage-sdk v1.0.1
-	github.com/slidebolt/sb-storage-server v1.0.1
-	github.com/slidebolt/sb-testkit v1.0.1
+	github.com/slidebolt/plugin-amcrest v1.0.2
+	github.com/slidebolt/plugin-androidtv v1.0.2
+	github.com/slidebolt/plugin-automation v1.0.2
+	github.com/slidebolt/plugin-esphome v1.0.2
+	github.com/slidebolt/plugin-frigate v1.0.2
+	github.com/slidebolt/plugin-kasa v1.0.2
+	github.com/slidebolt/plugin-system v1.0.2
+	github.com/slidebolt/plugin-wiz v1.0.2
+	github.com/slidebolt/plugin-zigbee2mqtt v1.0.2
+	github.com/slidebolt/sb-domain v1.0.2
+	github.com/slidebolt/sb-messenger-sdk v1.0.2
+	github.com/slidebolt/sb-script v1.0.2
+	github.com/slidebolt/sb-storage-sdk v1.0.2
+	github.com/slidebolt/sb-storage-server v1.0.2
+	github.com/slidebolt/sb-testkit v1.0.2
 )
 
 require (
@@ -64,7 +64,7 @@ require (
 	github.com/nats-io/nkeys v0.4.15 // indirect
 	github.com/nats-io/nuid v1.0.1 // indirect
 	github.com/sirupsen/logrus v1.9.3 // indirect
-	github.com/slidebolt/sb-contract v1.0.1 // indirect
+	github.com/slidebolt/sb-contract v1.0.2 // indirect
 	github.com/vishen/go-chromecast v0.3.4 // indirect
 	github.com/yuin/gopher-lua v1.1.1 // indirect
 	go.etcd.io/bbolt v1.4.0 // indirect
