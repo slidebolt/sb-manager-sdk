@@ -4,7 +4,7 @@ go 1.26.1
 
 require (
 	github.com/slidebolt/plugin-amcrest v1.0.5
-	github.com/slidebolt/plugin-androidtv v1.0.5
+	github.com/slidebolt/plugin-androidtv v1.0.6
 	github.com/slidebolt/plugin-automation v1.0.5
 	github.com/slidebolt/plugin-esphome v1.0.4
 	github.com/slidebolt/plugin-frigate v1.0.5
@@ -65,7 +65,6 @@ require (
 	github.com/nats-io/nuid v1.0.1 // indirect
 	github.com/sirupsen/logrus v1.9.3 // indirect
 	github.com/slidebolt/sb-contract v1.0.4 // indirect
-	github.com/slidebolt/sb-logging-sdk v1.0.0 // indirect
 	github.com/slidebolt/sb-virtual v1.0.4 // indirect
 	github.com/vishen/go-chromecast v0.3.4 // indirect
 	github.com/yuin/gopher-lua v1.1.1 // indirect
@@ -78,43 +77,4 @@ require (
 	golang.org/x/time v0.15.0 // indirect
 	golang.org/x/tools v0.41.0 // indirect
 	google.golang.org/protobuf v1.36.11 // indirect
-	modernc.org/sqlite v1.48.2 // indirect
 )
-
-replace github.com/slidebolt/plugin-amcrest => ../plugin-amcrest
-
-replace github.com/slidebolt/plugin-androidtv => ../plugin-androidtv
-
-replace github.com/slidebolt/plugin-automation => ../plugin-automation
-
-replace github.com/slidebolt/plugin-esphome => ../plugin-esphome
-
-replace github.com/slidebolt/plugin-frigate => ../plugin-frigate
-
-replace github.com/slidebolt/plugin-kasa => ../plugin-kasa
-
-replace github.com/slidebolt/plugin-system => ../plugin-system
-
-replace github.com/slidebolt/plugin-wiz => ../plugin-wiz
-
-replace github.com/slidebolt/plugin-zigbee2mqtt => ../plugin-zigbee2mqtt
-
-replace github.com/slidebolt/sb-script => ../sb-script
-
-replace github.com/slidebolt/sb-testkit => ../sb-testkit
-
-replace github.com/slidebolt/sb-contract => ../sb-contract
-
-replace github.com/slidebolt/sb-domain => ../sb-domain
-
-replace github.com/slidebolt/sb-messenger-sdk => ../sb-messenger-sdk
-
-replace github.com/slidebolt/sb-storage-sdk => ../sb-storage-sdk
-
-replace github.com/slidebolt/sb-storage-server => ../sb-storage-server
-
-replace github.com/slidebolt/sb-logging-sdk => ../sb-logging-sdk
-
-replace github.com/slidebolt/sb-logging => ../sb-logging
-
-replace github.com/slidebolt/sb-virtual => ../sb-virtual
