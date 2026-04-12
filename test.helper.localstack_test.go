@@ -13,17 +13,17 @@ import (
 
 	amcrestapp "github.com/slidebolt/plugin-amcrest/app"
 	androidtvapp "github.com/slidebolt/plugin-androidtv/app"
+	automationapp "github.com/slidebolt/plugin-automation/app"
 	esphomeapp "github.com/slidebolt/plugin-esphome/app"
 	frigateapp "github.com/slidebolt/plugin-frigate/app"
 	kasaapp "github.com/slidebolt/plugin-kasa/app"
 	systemapp "github.com/slidebolt/plugin-system/app"
 	wizapp "github.com/slidebolt/plugin-wiz/app"
 	z2mapp "github.com/slidebolt/plugin-zigbee2mqtt/app"
-	testkit "github.com/slidebolt/sb-testkit"
 	messenger "github.com/slidebolt/sb-messenger-sdk"
-	automationapp "github.com/slidebolt/plugin-automation/app"
 	scriptserver "github.com/slidebolt/sb-script/server"
 	storage "github.com/slidebolt/sb-storage-sdk"
+	testkit "github.com/slidebolt/sb-testkit"
 )
 
 // pluginApp is the minimal interface every plugin app satisfies.
@@ -37,9 +37,9 @@ type pluginApp interface {
 // StartPlugins() to launch plugins — callers may seed storage before calling
 // Start() so that plugins see pre-existing data during their OnStart phase.
 type LocalStack struct {
-	t                *testing.T
-	env              *testkit.TestEnv
-	configuredIDs    []string
+	t             *testing.T
+	env           *testkit.TestEnv
+	configuredIDs []string
 }
 
 // NewLocalStack creates a LocalStack with messenger and storage started.
@@ -86,15 +86,15 @@ func (ls *LocalStack) StartPlugins(names ...string) *LocalStack {
 	ls.startScript()
 
 	pluginFactories := map[string]func() pluginApp{
-		systemapp.PluginID:    func() pluginApp { return systemapp.New() },
+		systemapp.PluginID:     func() pluginApp { return systemapp.New() },
 		automationapp.PluginID: func() pluginApp { return automationapp.New() },
-		esphomeapp.PluginID:   func() pluginApp { return esphomeapp.New() },
-		wizapp.PluginID:       func() pluginApp { return wizapp.New() },
-		z2mapp.PluginID:       func() pluginApp { return z2mapp.New() },
-		amcrestapp.PluginID:   func() pluginApp { return amcrestapp.New() },
-		androidtvapp.PluginID: func() pluginApp { return androidtvapp.New() },
-		frigateapp.PluginID:   func() pluginApp { return frigateapp.New() },
-		kasaapp.PluginID:      func() pluginApp { return kasaapp.New() },
+		esphomeapp.PluginID:    func() pluginApp { return esphomeapp.New() },
+		wizapp.PluginID:        func() pluginApp { return wizapp.New() },
+		z2mapp.PluginID:        func() pluginApp { return z2mapp.New() },
+		amcrestapp.PluginID:    func() pluginApp { return amcrestapp.New() },
+		androidtvapp.PluginID:  func() pluginApp { return androidtvapp.New() },
+		frigateapp.PluginID:    func() pluginApp { return frigateapp.New() },
+		kasaapp.PluginID:       func() pluginApp { return kasaapp.New() },
 	}
 
 	for _, name := range names {
@@ -152,8 +152,10 @@ func (ls *LocalStack) startPlugin(id string, p pluginApp) {
 
 	deps := map[string]json.RawMessage{
 		"messenger": ls.env.MessengerPayload(),
+		"storage":   ls.env.StoragePayload(),
 	}
 	if _, err := p.OnStart(deps); err != nil {
+
 		ls.t.Fatalf("localstack: start %s: %v", id, err)
 	}
 	ls.t.Cleanup(func() { p.OnShutdown() }) //nolint:errcheck
