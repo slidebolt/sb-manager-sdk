@@ -142,12 +142,18 @@ func TestLocalStackPluginAutomationCreatesGroupsFromMultipleAutodiscoverySources
 		t.Logf("group %q created from multiple autodiscovery sources", groupName)
 	}
 
-	// Verify exactly two groups were created.
+	// Verify exactly two groups were created (filtering out the collection root).
 	entries, err := store.Search(automationapp.PluginID + ".group.>")
 	if err != nil {
 		t.Fatalf("search groups: %v", err)
 	}
-	if len(entries) != 2 {
-		t.Errorf("expected 2 group entities, got %d", len(entries))
+	var count int
+	for _, e := range entries {
+		if e.Key != automationapp.PluginID+".group" {
+			count++
+		}
+	}
+	if count != 2 {
+		t.Errorf("expected 2 group entities, got %d", count)
 	}
 }
