@@ -3,18 +3,24 @@ module github.com/slidebolt/sb-manager-sdk
 go 1.26.1
 
 require (
+	github.com/gorilla/websocket v1.5.3
+	github.com/slidebolt/asterisk-host v1.0.0
 	github.com/slidebolt/plugin-amcrest v1.0.7
 	github.com/slidebolt/plugin-androidtv v1.0.8
+	github.com/slidebolt/plugin-asterisk v1.0.10
 	github.com/slidebolt/plugin-automation v1.0.8
 	github.com/slidebolt/plugin-esphome v1.0.7
 	github.com/slidebolt/plugin-frigate v1.0.9
 	github.com/slidebolt/plugin-kasa v1.0.7
+	github.com/slidebolt/plugin-opencode v1.0.0
 	github.com/slidebolt/plugin-system v1.0.6
 	github.com/slidebolt/plugin-wiz v1.0.7
 	github.com/slidebolt/plugin-zigbee2mqtt v1.0.7
-	github.com/slidebolt/sb-domain v1.0.13
+	github.com/slidebolt/sb-domain v1.0.14
+	github.com/slidebolt/sb-media v1.0.0
 	github.com/slidebolt/sb-messenger-sdk v1.0.7
 	github.com/slidebolt/sb-script v1.0.9
+	github.com/slidebolt/sb-speech v1.0.0
 	github.com/slidebolt/sb-storage-sdk v1.0.7
 	github.com/slidebolt/sb-storage-server v1.0.9
 	github.com/slidebolt/sb-testkit v1.0.10
@@ -48,7 +54,6 @@ require (
 	github.com/fsnotify/fsnotify v1.9.0 // indirect
 	github.com/golang/snappy v0.0.4 // indirect
 	github.com/google/go-tpm v0.9.8 // indirect
-	github.com/gorilla/websocket v1.5.3 // indirect
 	github.com/grandcat/zeroconf v1.0.0 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
 	github.com/klauspost/compress v1.18.4 // indirect
@@ -67,6 +72,8 @@ require (
 	github.com/sirupsen/logrus v1.9.3 // indirect
 	github.com/slidebolt/sb-contract v1.0.6 // indirect
 	github.com/slidebolt/sb-logging-sdk v1.0.8 // indirect
+	github.com/slidebolt/sb-media-sdk v1.0.0 // indirect
+	github.com/slidebolt/sb-speech-sdk v1.0.0 // indirect
 	github.com/slidebolt/sb-virtual v1.0.9 // indirect
 	github.com/vishen/go-chromecast v0.3.4 // indirect
 	github.com/yuin/gopher-lua v1.1.1 // indirect

@@ -11,17 +11,22 @@ import (
 	"encoding/json"
 	"testing"
 
+	asteriskhostapp "github.com/slidebolt/asterisk-host/app"
 	amcrestapp "github.com/slidebolt/plugin-amcrest/app"
 	androidtvapp "github.com/slidebolt/plugin-androidtv/app"
+	asteriskapp "github.com/slidebolt/plugin-asterisk/app"
 	automationapp "github.com/slidebolt/plugin-automation/app"
 	esphomeapp "github.com/slidebolt/plugin-esphome/app"
 	frigateapp "github.com/slidebolt/plugin-frigate/app"
 	kasaapp "github.com/slidebolt/plugin-kasa/app"
+	opencodeapp "github.com/slidebolt/plugin-opencode/app"
 	systemapp "github.com/slidebolt/plugin-system/app"
 	wizapp "github.com/slidebolt/plugin-wiz/app"
 	z2mapp "github.com/slidebolt/plugin-zigbee2mqtt/app"
+	mediaapp "github.com/slidebolt/sb-media/app"
 	messenger "github.com/slidebolt/sb-messenger-sdk"
 	scriptserver "github.com/slidebolt/sb-script/server"
+	speechapp "github.com/slidebolt/sb-speech/app"
 	storage "github.com/slidebolt/sb-storage-sdk"
 	testkit "github.com/slidebolt/sb-testkit"
 )
@@ -59,7 +64,8 @@ func NewLocalStack(t *testing.T) *LocalStack {
 //  1. sb-script (scripting engine)
 //  2. plugin-system (seeds time/location entities)
 //  3. plugin-automation (discovers groups from labelled entities)
-//  4. remaining plugins in any order
+//  4. sb-media and asterisk-host (plugin-asterisk talks to the host)
+//  5. remaining plugins in any order
 func (ls *LocalStack) Start() *LocalStack {
 	ls.t.Helper()
 
@@ -67,6 +73,11 @@ func (ls *LocalStack) Start() *LocalStack {
 
 	ls.startPlugin(systemapp.PluginID, systemapp.New())
 	ls.startPlugin(automationapp.PluginID, automationapp.New())
+	ls.startPlugin(mediaapp.ServiceID, mediaapp.New())
+	ls.startPlugin(asteriskhostapp.ServiceID, asteriskhostapp.New())
+	ls.startPlugin(speechapp.ServiceID, speechapp.New())
+	ls.startPlugin(asteriskapp.PluginID, asteriskapp.New())
+	ls.startPlugin(opencodeapp.PluginID, opencodeapp.New())
 	ls.startPlugin(esphomeapp.PluginID, esphomeapp.New())
 	ls.startPlugin(wizapp.PluginID, wizapp.New())
 	ls.startPlugin(z2mapp.PluginID, z2mapp.New())
@@ -86,15 +97,20 @@ func (ls *LocalStack) StartPlugins(names ...string) *LocalStack {
 	ls.startScript()
 
 	pluginFactories := map[string]func() pluginApp{
-		systemapp.PluginID:     func() pluginApp { return systemapp.New() },
-		automationapp.PluginID: func() pluginApp { return automationapp.New() },
-		esphomeapp.PluginID:    func() pluginApp { return esphomeapp.New() },
-		wizapp.PluginID:        func() pluginApp { return wizapp.New() },
-		z2mapp.PluginID:        func() pluginApp { return z2mapp.New() },
-		amcrestapp.PluginID:    func() pluginApp { return amcrestapp.New() },
-		androidtvapp.PluginID:  func() pluginApp { return androidtvapp.New() },
-		frigateapp.PluginID:    func() pluginApp { return frigateapp.New() },
-		kasaapp.PluginID:       func() pluginApp { return kasaapp.New() },
+		systemapp.PluginID:        func() pluginApp { return systemapp.New() },
+		automationapp.PluginID:    func() pluginApp { return automationapp.New() },
+		mediaapp.ServiceID:        func() pluginApp { return mediaapp.New() },
+		asteriskhostapp.ServiceID: func() pluginApp { return asteriskhostapp.New() },
+		asteriskapp.PluginID:      func() pluginApp { return asteriskapp.New() },
+		speechapp.ServiceID:       func() pluginApp { return speechapp.New() },
+		opencodeapp.PluginID:      func() pluginApp { return opencodeapp.New() },
+		esphomeapp.PluginID:       func() pluginApp { return esphomeapp.New() },
+		wizapp.PluginID:           func() pluginApp { return wizapp.New() },
+		z2mapp.PluginID:           func() pluginApp { return z2mapp.New() },
+		amcrestapp.PluginID:       func() pluginApp { return amcrestapp.New() },
+		androidtvapp.PluginID:     func() pluginApp { return androidtvapp.New() },
+		frigateapp.PluginID:       func() pluginApp { return frigateapp.New() },
+		kasaapp.PluginID:          func() pluginApp { return kasaapp.New() },
 	}
 
 	for _, name := range names {
