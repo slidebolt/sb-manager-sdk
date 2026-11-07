@@ -4,26 +4,26 @@ go 1.26.1
 
 require (
 	github.com/gorilla/websocket v1.5.3
-	github.com/slidebolt/asterisk-host v1.0.1
-	github.com/slidebolt/plugin-amcrest v1.0.12
-	github.com/slidebolt/plugin-androidtv v1.0.12
-	github.com/slidebolt/plugin-asterisk v1.0.12
-	github.com/slidebolt/plugin-automation v1.0.12
-	github.com/slidebolt/plugin-esphome v1.0.13
-	github.com/slidebolt/plugin-frigate v1.0.12
-	github.com/slidebolt/plugin-kasa v1.0.12
-	github.com/slidebolt/plugin-opencode v1.0.2
-	github.com/slidebolt/plugin-system v1.0.11
-	github.com/slidebolt/plugin-wiz v1.0.12
-	github.com/slidebolt/plugin-zigbee2mqtt v1.0.12
-	github.com/slidebolt/sb-domain v1.0.14
+	github.com/slidebolt/asterisk-host v1.0.2
+	github.com/slidebolt/plugin-amcrest v1.0.13
+	github.com/slidebolt/plugin-androidtv v1.0.13
+	github.com/slidebolt/plugin-asterisk v1.0.13
+	github.com/slidebolt/plugin-automation v1.0.13
+	github.com/slidebolt/plugin-esphome v1.0.14
+	github.com/slidebolt/plugin-frigate v1.0.13
+	github.com/slidebolt/plugin-kasa v1.0.13
+	github.com/slidebolt/plugin-opencode v1.0.3
+	github.com/slidebolt/plugin-system v1.0.12
+	github.com/slidebolt/plugin-wiz v1.0.13
+	github.com/slidebolt/plugin-zigbee2mqtt v1.0.13
+	github.com/slidebolt/sb-domain v1.0.15
 	github.com/slidebolt/sb-media v1.0.1
 	github.com/slidebolt/sb-messenger-sdk v1.0.8
-	github.com/slidebolt/sb-script v1.0.12
-	github.com/slidebolt/sb-speech v1.0.1
+	github.com/slidebolt/sb-script v1.0.14
+	github.com/slidebolt/sb-speech v1.0.2
 	github.com/slidebolt/sb-storage-sdk v1.0.8
 	github.com/slidebolt/sb-storage-server v1.0.11
-	github.com/slidebolt/sb-testkit v1.0.12
+	github.com/slidebolt/sb-testkit v1.0.13
 )
 
 require (
@@ -73,8 +73,8 @@ require (
 	github.com/slidebolt/sb-contract v1.0.6 // indirect
 	github.com/slidebolt/sb-logging-sdk v1.0.9 // indirect
 	github.com/slidebolt/sb-media-sdk v1.0.1 // indirect
-	github.com/slidebolt/sb-speech-sdk v1.0.1 // indirect
-	github.com/slidebolt/sb-virtual v1.0.12 // indirect
+	github.com/slidebolt/sb-speech-sdk v1.0.2 // indirect
+	github.com/slidebolt/sb-virtual v1.0.13 // indirect
 	github.com/vishen/go-chromecast v0.3.4 // indirect
 	github.com/yuin/gopher-lua v1.1.1 // indirect
 	go.etcd.io/bbolt v1.4.0 // indirect
